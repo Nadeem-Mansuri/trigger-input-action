@@ -30,17 +30,17 @@ on:
 
 
 jobs:
-  test-inputs:
+  build-deploy:
     runs-on: ubuntu-latest
     steps:
-      - name: Print Inputs
+      - name: Print workflow Inputs
         run: |
-          echo "Run Tests: ${{ github.event.inputs.run-tests }}"
-          echo "Test Type: ${{ github.event.inputs.test-type }}"
-          echo "Environment: ${{ github.event.inputs.environment }}"
-          echo "Build Number: ${{ github.event.inputs.build-number }}"
-          echo "Message: ${{ github.event.inputs.message }}"
+          echo "Run Tests: ${{ inputs.run-tests }}"
+          echo "Test Type: ${{ inputs.test-type }}"
+          echo "Environment: ${{ inputs.environment }}"
+          echo "Build Number: ${{ inputs.build-number }}"
+          echo "Message: ${{ inputs.message }}"
 
       - name: Run tests (if selected)
-        if: ${{ github.event.inputs.run-tests == true }}
+        if: ${{ inputs.run-tests == true }}
         run: echo "Testing............"
