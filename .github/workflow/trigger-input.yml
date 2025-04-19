@@ -1,6 +1,7 @@
 name: Triggered Workflow with Various Inputs
 
 on:
+  push:
   workflow_dispatch:
     inputs:
       run-tests:
@@ -27,7 +28,7 @@ on:
         description: "Additional message"
         type: string
         required: false
-        
+
 
 jobs:
   test-inputs:
