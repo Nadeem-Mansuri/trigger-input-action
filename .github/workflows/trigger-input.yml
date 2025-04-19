@@ -1,7 +1,6 @@
 name: Triggered Workflow with Various Inputs
 
 on:
-  push:
   workflow_dispatch:
     inputs:
       run-tests:
