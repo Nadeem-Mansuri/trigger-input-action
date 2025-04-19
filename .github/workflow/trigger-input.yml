@@ -27,6 +27,7 @@ on:
         description: "Additional message"
         type: string
         required: false
+        
 
 jobs:
   test-inputs:
